@@ -66,6 +66,22 @@ namespace _15_GameOfCraps
             }
         }
 
+        private void DisplayMessage()
+        {
+            switch (_gameStatus)
+            {
+                case GameStatus.Win:
+                    Console.WriteLine($"Congratulations, you rolled {_diceSum}. YOU WIN!");
+                    break;
+                case GameStatus.Lose:
+                    Console.WriteLine($"Sorry, you rolled {_diceSum}. YOU LOSE!");
+                    break;
+                default:
+                    Console.WriteLine($"You rolled {_sum}. Your point is {_point}. Keep rolling!";
+                    break;
+            }
+        }
+
 
     }
 }
