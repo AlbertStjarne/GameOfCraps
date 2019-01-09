@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{48C57E83-1E22-47EF-991C-D38F012F3ADD}|Default">
+  <MonoDevelop.Ide.ItemProperties.__15__GameOfCraps FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="_15_GameOfCraps/Properties/RollDice.cs">
+    <Files>
+      <File FileName="_15_GameOfCraps/Program.cs" Line="9" Column="13" />
+      <File FileName="_15_GameOfCraps/Properties/RollDice.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
