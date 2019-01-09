@@ -83,5 +83,32 @@ namespace _15_GameOfCraps
         }
 
 
+        public void Play()
+        {
+            _sum = _roll.DiceRoll();
+            _numRolls++;
+            EvaluateRoll();
+            DisplayMessage();
+
+            while(_gameStatus == GameStatus.Continue)
+            {
+                KeepPlaying();
+                DisplayMessage();
+            }
+        }
+
+        private void KeepPlaying()
+        {
+            _sum = _roll.DiceRoll();
+            _numRolls++;
+
+            if (_sum == _point)
+                _gameStatus = GameStatus.Win;
+            else if (_sum == 7)
+                _gameStatus = GameStatus.Lose;
+            else
+                _gameStatus = GameStatus.Continue;
+        }
+
     }
 }
