@@ -27,14 +27,14 @@ namespace _15_GameOfCraps.Properties
             if (result == CrapsGame.GameStatus.Win)
             {
                 if (rounds <= 20)
-                    Wins[round] += 1;
+                    Wins[rounds] += 1;
                 else
                     Wins[21] += 1;
             }
             else if (result == CrapsGame.GameStatus.Lose)
             {
                 if (rounds <= 20)
-                    Loses[round] += 1;
+                    Loses[rounds] += 1;
                 else
                     Loses[21] += 1; 
             }
@@ -43,8 +43,27 @@ namespace _15_GameOfCraps.Properties
         public void DisplayStatistics()
         {
             double probability;
+            double avg;
+
+            for (int i = 1; i <= 21; i++)
+            {
+                if (i == 21)
+                    Console.WriteLine($"Round 21 or more wins: {Wins[i]}");
+                else
+                    Console.WriteLine($"Round {i} wins: {Wins[i]}");
+            }
+
+            for (int i = 1; i <= 21; i++)
+            {
+                if (i == 21)
+                    Console.WriteLine($"Round 21 or more loses: {Loses[i]}");
+                else
+                    Console.WriteLine($"Round {i} loses: {Loses[i]}");
+            }
+
             probability = ProbabilityOfWinning();
             Console.WriteLine($"Chances of winning the game of Craps are {probability:P}");
+            Console.WriteLine($"Average length of a game of Craps is {AverageLength():N2} rounds");
         }
 
         public double ProbabilityOfWinning()

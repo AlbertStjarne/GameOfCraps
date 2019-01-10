@@ -28,7 +28,7 @@ namespace _15_GameOfCraps
         private int _numRolls;
         private int _sum;
         private int _point;
-        public const int numGames = 5;
+        public const int numGames = 5000;
         private Statistics _statistics;
 
 
@@ -46,26 +46,31 @@ namespace _15_GameOfCraps
                     _diceSum = DiceSum.Seven;
                     _gameStatus = GameStatus.Win;
                     _point = 0;
+                    _statistics.SetStats(_numRolls, _gameStatus);
                     break;
                 case 11:
                     _diceSum = DiceSum.YoLeven;
                     _gameStatus = GameStatus.Win;
                     _point = 0;
+                    _statistics.SetStats(_numRolls, _gameStatus);
                     break;
                 case 2:
                     _diceSum = DiceSum.SnakeEyes;
                     _gameStatus = GameStatus.Lose;
                     _point = 0;
+                    _statistics.SetStats(_numRolls, _gameStatus);
                     break;
                 case 3:
                     _diceSum = DiceSum.Trey;
                     _gameStatus = GameStatus.Lose;
                     _point = 0;
+                    _statistics.SetStats(_numRolls, _gameStatus);
                     break;
                 case 12:
                     _diceSum = DiceSum.BoxCars;
                     _gameStatus = GameStatus.Lose;
                     _point = 0;
+                    _statistics.SetStats(_numRolls, _gameStatus);
                     break;
                 default:
                     _gameStatus = GameStatus.Continue;
@@ -100,19 +105,19 @@ namespace _15_GameOfCraps
         {
             for (int i = 0; i < numGames; i++)
             {
-                Console.WriteLine($"************************************ game # {i + 1}");
+                //Console.WriteLine($"************************************ game # {i + 1}");
                 _gameStatus = GameStatus.Continue;
                 _numRolls = 0;
 
                 _sum = _roll.DiceRoll();
                 _numRolls++;
                 EvaluateRoll();
-                DisplayMessage();
+                //DisplayMessage();
 
                 while (_gameStatus == GameStatus.Continue)
                 {
                     KeepPlaying();
-                    DisplayMessage();
+                    //DisplayMessage();
                 }
 
             }
@@ -126,9 +131,15 @@ namespace _15_GameOfCraps
             _numRolls++;
 
             if (_sum == _point)
+            {
                 _gameStatus = GameStatus.Win;
+                _statistics.SetStats(_numRolls, _gameStatus);
+            }
             else if (_sum == 7)
+            {
                 _gameStatus = GameStatus.Lose;
+                _statistics.SetStats(_numRolls, _gameStatus);
+            }
             else
                 _gameStatus = GameStatus.Continue;
         }
