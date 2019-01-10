@@ -1,4 +1,5 @@
 ﻿using System;
+using _15_GameOfCraps.Properties;
 
 namespace _15_GameOfCraps
 {
@@ -71,13 +72,17 @@ namespace _15_GameOfCraps
             switch (_gameStatus)
             {
                 case GameStatus.Win:
-                    Console.WriteLine($"Congratulations, you rolled {_diceSum}. YOU WIN!");
+                    Console.WriteLine(_numRolls == 1
+                    ? $"Congratulations, you rolled {_diceSum}. YOU WIN!"
+                    : $"Congratulations, you rolled {_sum}. YOU WIN!");
                     break;
                 case GameStatus.Lose:
-                    Console.WriteLine($"Sorry, you rolled {_diceSum}. YOU LOSE!");
+                    Console.WriteLine(_numRolls == 1
+                    ? $"Sorry, you rolled {_diceSum}. YOU LOSE!"
+                    : $"Sorry, you rolled {_sum}. YOU LOSE!");
                     break;
                 default:
-                    Console.WriteLine($"You rolled {_sum}. Your point is {_point}. Keep rolling!";
+                    Console.WriteLine($"You rolled {_sum}. Your point is {_point}. Keep rolling!");
                     break;
             }
         }

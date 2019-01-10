@@ -6,6 +6,10 @@ namespace _15_GameOfCraps
     {
 
         static void Main(string[] args)
+        {
+            CrapsGame craps = new CrapsGame();
+            craps.Play();
+        }
 
     }
 }
