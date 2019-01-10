@@ -22,13 +22,21 @@ namespace _15_GameOfCraps
             Continue
         };
 
-        private RollDice _roll = new RollDice();
+        private RollDice _roll;
         private GameStatus _gameStatus;
         private DiceSum _diceSum;
         private int _numRolls;
         private int _sum;
         private int _point;
+        public const int numGames = 5;
+        private Statistics _statistics;
 
+
+        public CrapsGame()
+        {
+            _roll = new RollDice();
+            _statistics = new Statistics();
+        }
 
         private void EvaluateRoll()
         {
@@ -90,16 +98,26 @@ namespace _15_GameOfCraps
 
         public void Play()
         {
-            _sum = _roll.DiceRoll();
-            _numRolls++;
-            EvaluateRoll();
-            DisplayMessage();
-
-            while (_gameStatus == GameStatus.Continue)
+            for (int i = 0; i < numGames; i++)
             {
-                KeepPlaying();
+                Console.WriteLine($"************************************ game # {i + 1}");
+                _gameStatus = GameStatus.Continue;
+                _numRolls = 0;
+
+                _sum = _roll.DiceRoll();
+                _numRolls++;
+                EvaluateRoll();
                 DisplayMessage();
+
+                while (_gameStatus == GameStatus.Continue)
+                {
+                    KeepPlaying();
+                    DisplayMessage();
+                }
+
             }
+
+            _statistics.DisplayStatistics();
         }
 
         private void KeepPlaying()
