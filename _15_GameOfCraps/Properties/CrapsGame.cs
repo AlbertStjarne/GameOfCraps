@@ -15,7 +15,7 @@ namespace _15_GameOfCraps
             BoxCars = 12
         };
 
-        private enum GameStatus
+        public enum GameStatus
         {
             Win,
             Lose,
