@@ -1,6 +1,0 @@
-/Users/albertstjarne/Udemy/Csharp_Logical_Puzzle_Games/_15_GameOfCraps/_15_GameOfCraps/obj/x86/Debug/_15_GameOfCraps.csprojAssemblyReference.cache
-/Users/albertstjarne/Udemy/Csharp_Logical_Puzzle_Games/_15_GameOfCraps/_15_GameOfCraps/obj/x86/Debug/_15_GameOfCraps.csproj.CoreCompileInputs.cache
-/Users/albertstjarne/Udemy/Csharp_Logical_Puzzle_Games/_15_GameOfCraps/_15_GameOfCraps/bin/Debug/_15_GameOfCraps.exe
-/Users/albertstjarne/Udemy/Csharp_Logical_Puzzle_Games/_15_GameOfCraps/_15_GameOfCraps/bin/Debug/_15_GameOfCraps.pdb
-/Users/albertstjarne/Udemy/Csharp_Logical_Puzzle_Games/_15_GameOfCraps/_15_GameOfCraps/obj/x86/Debug/_15_GameOfCraps.exe
-/Users/albertstjarne/Udemy/Csharp_Logical_Puzzle_Games/_15_GameOfCraps/_15_GameOfCraps/obj/x86/Debug/_15_GameOfCraps.pdb
